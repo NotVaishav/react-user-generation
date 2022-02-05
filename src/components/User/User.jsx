@@ -34,7 +34,7 @@ export default function User (props) {
   return (
     <div className='py-10'>
       <Card className='bg-white'>
-        <form>
+        <form onSubmit={formSubmitHandler}>
           <div className='form-options flex flex-col'>
             <label htmlFor='username'>Username</label>
             <input
@@ -55,7 +55,7 @@ export default function User (props) {
           </div>
           <button
             className='bg-[#4C0B56] text-white px-7 py-3 text-2xl my-3 font-semibold hover:bg-[#8d17a0] transition-all duration-200'
-            onClick={formSubmitHandler}
+            type='submit'
           >
             Add User
           </button>
